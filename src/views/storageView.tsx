@@ -21,8 +21,8 @@ export const StorageView: React.FC = (props) => {
     const loadData = async () => {
         if (doLoadData === true) {
 
-            const response = await axios.get("http://"+settings.ip+":"+settings.port+"/getWorldInv");
-            const response_extra = await axios.get("http://"+settings.ip+":"+settings.port+"/getProdStats");
+            const response = await axios.get("https://"+settings.ip+":"+settings.port+"/getWorldInv");
+            const response_extra = await axios.get("https://"+settings.ip+":"+settings.port+"/getProdStats");
 
 
             //console.info(response.data);

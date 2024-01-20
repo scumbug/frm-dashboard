@@ -23,8 +23,8 @@ export const Drones:React.FC = (props) => {
     const loadData = async () => {
         if (doLoadData === true) {
 
-            const response = await axios.get("http://"+settings.ip+":"+settings.port+"/getDrone");
-            const response_station = await axios.get("http://"+settings.ip+":"+settings.port+"/getDroneStation");
+            const response = await axios.get("https://"+settings.ip+":"+settings.port+"/getDrone");
+            const response_station = await axios.get("https://"+settings.ip+":"+settings.port+"/getDroneStation");
             
             const data = response.data;
             const data_station = response_station.data;

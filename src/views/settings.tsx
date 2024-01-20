@@ -52,7 +52,7 @@ export const Settings: React.FC = (props) => {
                                 onChange={(e) => {
                                     setSettings({ ...settings, ["ip"]: e.target.value });
                                 }}
-                                startDecorator={"http://"}
+                                startDecorator={"https://"}
                                 placeholder="127.0.0.1"
                             />
                             <Input
@@ -61,7 +61,7 @@ export const Settings: React.FC = (props) => {
                                 onChange={(e) => {
                                     setSettings({ ...settings, ["port"]: e.target.value });
                                 }}
-                                startDecorator={"http://"+settings.ip+":"}
+                                startDecorator={"https://"+settings.ip+":"}
                                 placeholder="8080"
                             />
                         </CardContent>

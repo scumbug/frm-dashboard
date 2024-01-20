@@ -34,7 +34,7 @@ export const ConnectionCheckerProvider:React.FC<any> = (props) => {
     const checkConnectionToFRM = async () => {
         clearTimeout(timeout);
 
-        axios.get("http://"+JSON.parse(localStorage.getItem("rmd_settings") ?? JSON.stringify(defaultSettingsData)).ip+":"+JSON.parse(localStorage.getItem("rmd_settings") ?? JSON.stringify(defaultSettingsData)).port+"/getDoggo").then(()=>{
+        axios.get("https://"+JSON.parse(localStorage.getItem("rmd_settings") ?? JSON.stringify(defaultSettingsData)).ip+":"+JSON.parse(localStorage.getItem("rmd_settings") ?? JSON.stringify(defaultSettingsData)).port+"/getDoggo").then(()=>{
             console.log("[ConnectionChecker] Got data")
             setShowAlert(false);
         }).catch(()=>{

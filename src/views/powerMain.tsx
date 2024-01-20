@@ -17,7 +17,7 @@ export const PowerMain:React.FC = (props) => {
 
     const loadData = async () => {
         intervalVar = setInterval( async ()=>{
-            const response = await fetch("http://"+settings.ip+":"+settings.port+"/getPower");
+            const response = await fetch("https://"+settings.ip+":"+settings.port+"/getPower");
             const data = await response.text();
             const getPower = JSON.parse(data);
             console.info(getPower);
